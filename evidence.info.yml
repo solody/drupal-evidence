@@ -1,0 +1,7 @@
+name: 'Evidence'
+type: module
+description: 'Provide a evidence management system.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:system
