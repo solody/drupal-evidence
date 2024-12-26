@@ -1,0 +1,26 @@
+entity.evidence.view:
+  title: 'View'
+  route_name: entity.evidence.canonical
+  base_route: entity.evidence.canonical
+entity.evidence.edit_form:
+  title: 'Edit'
+  route_name: entity.evidence.edit_form
+  base_route: entity.evidence.canonical
+entity.evidence.delete_form:
+  title: 'Delete'
+  route_name: entity.evidence.delete_form
+  base_route: entity.evidence.canonical
+  weight: 10
+entity.evidence.collection:
+  title: 'Evidences'
+  route_name: entity.evidence.collection
+  base_route: system.admin_content
+  weight: 10
+entity.evidence_type.edit_form:
+  title: 'Edit'
+  route_name: entity.evidence_type.edit_form
+  base_route: entity.evidence_type.edit_form
+entity.evidence_type.collection:
+  title: 'List'
+  route_name: entity.evidence_type.collection
+  base_route: entity.evidence_type.collection

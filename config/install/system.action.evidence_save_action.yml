@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - evidence
+id: evidence_save_action
+label: 'Save evidences'
+type: evidence
+plugin: entity:save_action:evidence
+configuration: {  }

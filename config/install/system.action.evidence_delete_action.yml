@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - evidence
+id: evidence_delete_action
+label: 'Delete evidences'
+type: evidence
+plugin: entity:delete_action:evidence
+configuration: {  }

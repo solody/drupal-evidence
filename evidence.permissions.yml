@@ -1,0 +1,12 @@
+administer evidence types:
+  title: 'Administer evidence types'
+  description: 'Maintain the types of evidence entity.'
+  restrict access: true
+view evidence:
+  title: 'View evidence'
+edit evidence:
+  title: 'Edit evidence'
+delete evidence:
+  title: 'Delete evidence'
+create evidence:
+  title: 'Create evidence'

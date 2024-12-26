@@ -1,0 +1,10 @@
+entity.evidence.edit_form:
+  route_name: entity.evidence.edit_form
+  group: evidence
+  title: 'Edit'
+
+entity.evidence.delete_form:
+  route_name: entity.evidence.delete_form
+  group: evidence
+  title: 'Delete'
+  weight: 10
