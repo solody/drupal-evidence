@@ -44,7 +44,7 @@ use Drupal\user\EntityOwnerTrait;
  *   admin_permission = "administer evidence types",
  *   entity_keys = {
  *     "id" = "id",
- *     "bundle" = "bundle",
+ *     "bundle" = "type",
  *     "label" = "label",
  *     "uuid" = "uuid",
  *     "owner" = "uid",
@@ -76,6 +76,13 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
       // If no owner has been set explicitly, make the anonymous user the owner.
       $this->setOwnerId(0);
     }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getState() {
+    return $this->get('state')->first();
   }
 
   /**

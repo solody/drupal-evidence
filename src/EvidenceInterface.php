@@ -13,4 +13,12 @@ use Drupal\user\EntityOwnerInterface;
  */
 interface EvidenceInterface extends ContentEntityInterface, EntityOwnerInterface, EntityChangedInterface {
 
+  /**
+   * Gets the state.
+   *
+   * @return \Drupal\state_machine\Plugin\Field\FieldType\StateItemInterface
+   *   The state.
+   */
+  public function getState();
+
 }
