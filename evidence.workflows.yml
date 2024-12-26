@@ -1,0 +1,32 @@
+evidence_default:
+  id: evidence_default
+  group: evidence
+  label: 'Evidence default'
+  states:
+    draft:
+      label: 'Draft'
+    need_modify:
+      label: 'Need modify'
+    modified:
+      label: 'Modified'
+    rejected:
+      label: 'Rejected'
+    approved:
+      label: 'Approved'
+  transitions:
+    return:
+      label: 'Return'
+      from: [draft, modified]
+      to: need_modify
+    reject:
+      label: 'Reject'
+      from: [draft, modified]
+      to: rejected
+    modify:
+      label: 'Modify'
+      from: [need_modify]
+      to: modified
+    approve:
+      label: 'Approve'
+      from: [draft, modified]
+      to: approved

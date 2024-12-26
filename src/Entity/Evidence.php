@@ -101,28 +101,6 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['status'] = BaseFieldDefinition::create('boolean')
-      ->setLabel(t('Status'))
-      ->setDefaultValue(TRUE)
-      ->setSetting('on_label', 'Enabled')
-      ->setDisplayOptions('form', [
-        'type' => 'boolean_checkbox',
-        'settings' => [
-          'display_label' => FALSE,
-        ],
-        'weight' => 0,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayOptions('view', [
-        'type' => 'boolean',
-        'label' => 'above',
-        'weight' => 0,
-        'settings' => [
-          'format' => 'enabled-disabled',
-        ],
-      ])
-      ->setDisplayConfigurable('view', TRUE);
-
     $fields['description'] = BaseFieldDefinition::create('text_long')
       ->setLabel(t('Description'))
       ->setDisplayOptions('form', [
@@ -136,6 +114,23 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
         'weight' => 10,
       ])
       ->setDisplayConfigurable('view', TRUE);
+
+    $fields['state'] = BaseFieldDefinition::create('state')
+      ->setLabel(t('State'))
+      ->setDescription(t('The evidence state.'))
+      ->setRequired(TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'state_transition_form',
+        'settings' => [
+          'require_confirmation' => TRUE,
+          'use_modal' => TRUE,
+        ],
+        'weight' => 10,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setSetting('workflow', 'evidence_default');
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Author'))
