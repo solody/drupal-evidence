@@ -1,0 +1,27 @@
+{
+    "name": "drupal/evidence",
+    "type": "drupal-module",
+    "description": "Provide a evidence management system.",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://www.drupal.org/project/evidence",
+    "authors": [
+        {
+            "name": "Your name here",
+            "homepage": "https://www.drupal.org/u/YOUR_NAME_HERE",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://www.drupal.org/node/NID/committers",
+            "role": "Contributors"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/evidence",
+        "source": "http://cgit.drupalcode.org/evidence"
+    },
+    "require": {
+        "drupal/state_machine": "^1.0"
+    }
+}
