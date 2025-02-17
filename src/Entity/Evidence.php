@@ -43,7 +43,7 @@ use Drupal\user\EntityOwnerTrait;
  *   base_table = "evidence",
  *   admin_permission = "administer evidence types",
  *   entity_keys = {
- *     "id" = "id",
+ *     "id" = "evidence_id",
  *     "bundle" = "type",
  *     "label" = "label",
  *     "uuid" = "uuid",
