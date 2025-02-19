@@ -45,7 +45,7 @@ use Drupal\user\EntityOwnerTrait;
  *   entity_keys = {
  *     "id" = "evidence_id",
  *     "bundle" = "type",
- *     "label" = "label",
+ *     "label" = "title",
  *     "uuid" = "uuid",
  *     "owner" = "uid",
  *   },
@@ -92,7 +92,7 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
 
     $fields = parent::baseFieldDefinitions($entity_type);
 
-    $fields['label'] = BaseFieldDefinition::create('string')
+    $fields['title'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Label'))
       ->setRequired(TRUE)
       ->setSetting('max_length', 255)

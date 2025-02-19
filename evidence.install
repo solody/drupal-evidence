@@ -4,3 +4,17 @@
  * @file
  * Install, update and uninstall functions for the Evidence module.
  */
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ */
+function evidence_install(): void {
+  $permissions_for_anonymous = [
+  ];
+  $permissions_for_authenticated = [
+    'create evidence',
+  ];
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, $permissions_for_anonymous);
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array_merge($permissions_for_authenticated, $permissions_for_anonymous));
+}

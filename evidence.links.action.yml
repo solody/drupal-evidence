@@ -1,9 +1,3 @@
-evidence.type_add:
-  title: 'Add evidence type'
-  route_name: entity.evidence_type.add_form
-  appears_on:
-    - entity.evidence_type.collection
-
 evidence.add_page:
   title: 'Add evidence'
   route_name: entity.evidence.add_page

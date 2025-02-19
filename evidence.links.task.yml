@@ -16,11 +16,3 @@ entity.evidence.collection:
   route_name: entity.evidence.collection
   base_route: system.admin_content
   weight: 10
-entity.evidence_type.edit_form:
-  title: 'Edit'
-  route_name: entity.evidence_type.edit_form
-  base_route: entity.evidence_type.edit_form
-entity.evidence_type.collection:
-  title: 'List'
-  route_name: entity.evidence_type.collection
-  base_route: entity.evidence_type.collection

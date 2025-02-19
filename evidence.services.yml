@@ -1,0 +1,4 @@
+services:
+  plugin.manager.evidence_type:
+    class: Drupal\evidence\EvidenceTypePluginManager
+    parent: default_plugin_manager

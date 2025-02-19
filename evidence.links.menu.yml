@@ -1,9 +1,3 @@
-entity.evidence_type.collection:
-  title: 'Evidence types'
-  description: 'Manage and CRUD actions on Evidence type.'
-  parent: system.admin_structure
-  route_name: entity.evidence_type.collection
-
 entity.evidence.collection:
   title: 'Evidences'
   description: 'List of evidences.'

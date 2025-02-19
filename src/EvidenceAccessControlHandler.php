@@ -38,7 +38,7 @@ final class EvidenceAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL): AccessResult {
-    return AccessResult::allowedIfHasPermissions($account, ['create evidence', 'administer evidence types'], 'OR');
+    return AccessResult::allowedIfHasPermissions($account, ['create evidence'], 'OR');
   }
 
 }
