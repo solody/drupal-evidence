@@ -26,6 +26,7 @@ use Drupal\user\EntityOwnerTrait;
  *     plural = "@count evidences",
  *   ),
  *   bundle_label = @Translation("Evidence type"),
+ *   bundle_plugin_type = "evidence_type",
  *   handlers = {
  *     "list_builder" = "Drupal\evidence\EvidenceListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
@@ -41,7 +42,7 @@ use Drupal\user\EntityOwnerTrait;
  *     },
  *   },
  *   base_table = "evidence",
- *   admin_permission = "administer evidence types",
+ *   admin_permission = "administer evidences",
  *   entity_keys = {
  *     "id" = "evidence_id",
  *     "bundle" = "type",
@@ -51,15 +52,14 @@ use Drupal\user\EntityOwnerTrait;
  *   },
  *   links = {
  *     "collection" = "/admin/content/evidence",
- *     "add-form" = "/admin/content/evidence/add/{evidence_type}",
+ *     "add-form" = "/admin/content/evidence/add/{type}",
  *     "add-page" = "/admin/content/evidence/add",
  *     "canonical" = "/admin/content/evidence/{evidence}",
  *     "edit-form" = "/admin/content/evidence/{evidence}/edit",
  *     "delete-form" = "/admin/content/evidence/{evidence}/delete",
  *     "delete-multiple-form" = "/admin/content/evidence/delete-multiple",
  *   },
- *   bundle_entity_type = "evidence_type",
- *   field_ui_base_route = "entity.evidence_type.edit_form",
+ *   field_ui_base_route = "entity.evidence.settings",
  * )
  */
 final class Evidence extends ContentEntityBase implements EvidenceInterface {
@@ -93,7 +93,7 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
     $fields = parent::baseFieldDefinitions($entity_type);
 
     $fields['title'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Label'))
+      ->setLabel(t('Title'))
       ->setRequired(TRUE)
       ->setSetting('max_length', 255)
       ->setDisplayOptions('form', [

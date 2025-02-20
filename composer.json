@@ -22,6 +22,7 @@
         "source": "http://cgit.drupalcode.org/evidence"
     },
     "require": {
-        "drupal/state_machine": "^1.0"
+        "drupal/state_machine": "^1.0",
+        "drupal/entity": "^1.0"
     }
 }

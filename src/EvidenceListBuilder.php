@@ -18,7 +18,7 @@ final class EvidenceListBuilder extends EntityListBuilder {
   public function buildHeader(): array {
     $header['id'] = $this->t('ID');
     $header['label'] = $this->t('Label');
-    $header['status'] = $this->t('Status');
+    $header['state'] = $this->t('State');
     $header['uid'] = $this->t('Author');
     $header['created'] = $this->t('Created');
     $header['changed'] = $this->t('Updated');
@@ -32,7 +32,7 @@ final class EvidenceListBuilder extends EntityListBuilder {
     /** @var \Drupal\evidence\EvidenceInterface $entity */
     $row['id'] = $entity->id();
     $row['label'] = $entity->toLink();
-    $row['status'] = $entity->get('status')->value ? $this->t('Enabled') : $this->t('Disabled');
+    $row['state'] = $entity->get('state')->value;
     $username_options = [
       'label' => 'hidden',
       'settings' => ['link' => $entity->get('uid')->entity->isAuthenticated()],

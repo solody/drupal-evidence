@@ -12,10 +12,17 @@ use Drupal\evidence\EvidenceTypePluginBase;
  * Plugin implementation of the evidence_type.
  */
 #[EvidenceType(
-  id: 'foo',
-  label: new TranslatableMarkup('Foo'),
-  description: new TranslatableMarkup('Foo description.'),
+  id: 'default',
+  label: new TranslatableMarkup('Default'),
+  description: new TranslatableMarkup('A default plugin with nothing.'),
 )]
-final class Foo extends EvidenceTypePluginBase {
+final class DefaultEvidence extends EvidenceTypePluginBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildFieldDefinitions() {
+    return [];
+  }
 
 }

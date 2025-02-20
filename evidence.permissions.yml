@@ -1,3 +1,6 @@
+administer evidence:
+  title: 'Administer evidences'
+  restrict access: true
 view evidence:
   title: 'View evidence'
 edit evidence:

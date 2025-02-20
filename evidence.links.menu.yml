@@ -1,3 +1,9 @@
+entity.evidence.settings:
+  title: 'Evidence settings'
+  description: 'Configure evidence entity.'
+  route_name:  entity.evidence.settings
+  parent: system.admin_structure
+
 entity.evidence.collection:
   title: 'Evidences'
   description: 'List of evidences.'

@@ -1,0 +1,7 @@
+entity.evidence.settings:
+  path: 'admin/structure/evidence'
+  defaults:
+    _form: '\Drupal\evidence\Form\EvidenceSettingsForm'
+    _title: 'Evidence settings'
+  requirements:
+    _permission: 'administer evidence'
