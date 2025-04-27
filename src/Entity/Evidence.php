@@ -29,7 +29,7 @@ use Drupal\user\EntityOwnerTrait;
  *   bundle_plugin_type = "evidence_type",
  *   handlers = {
  *     "list_builder" = "Drupal\evidence\EvidenceListBuilder",
- *     "views_data" = "Drupal\views\EntityViewsData",
+ *     "views_data" = "Drupal\evidence\Entity\EvidenceViewsData",
  *     "access" = "Drupal\evidence\EvidenceAccessControlHandler",
  *     "form" = {
  *       "add" = "Drupal\evidence\Form\EvidenceForm",

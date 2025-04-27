@@ -5,6 +5,7 @@ package: Custom
 core_version_requirement: ^10 || ^11
 dependencies:
   - drupal:system
+  - drupal:views
   - state_machine:state_machine
   - entity:entity
 'interface translation project': evidence
