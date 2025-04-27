@@ -6,6 +6,7 @@ entity.evidence.settings:
 
 entity.evidence.collection:
   title: 'Evidences'
+  title_context: 'admin_menu'
   description: 'List of evidences.'
   route_name: entity.evidence.collection
   parent: system.admin_content

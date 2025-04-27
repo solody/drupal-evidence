@@ -7,3 +7,5 @@ dependencies:
   - drupal:system
   - state_machine:state_machine
   - entity:entity
+'interface translation project': evidence
+'interface translation server pattern': translations/%project.%language.po
