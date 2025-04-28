@@ -127,7 +127,7 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
       ->setDescription(t('The evidence state.'))
       ->setRequired(TRUE)
       ->setDisplayOptions('view', [
-        'label' => 'hidden',
+        'label' => 'inline',
         'type' => 'state_transition_form',
         'settings' => [
           'require_confirmation' => TRUE,
@@ -154,7 +154,7 @@ final class Evidence extends ContentEntityBase implements EvidenceInterface {
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayOptions('view', [
-        'label' => 'above',
+        'label' => 'inline',
         'type' => 'author',
         'weight' => 15,
       ])
