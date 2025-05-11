@@ -14,5 +14,5 @@ entity.evidence.delete_form:
 entity.evidence.collection:
   title: 'Evidences'
   route_name: entity.evidence.collection
-  base_route: system.admin_content
+  base_route: entity.evidence.canonical
   weight: 10
